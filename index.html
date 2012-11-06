@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+
+    <title>Toupée</title>
+
+    <link rel="stylesheet" href="assets/css/index.css">
+
+    <!--[if IE]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <script src="js/ie.js"></script>
+    <![endif]-->
+</head>
+<body>
+    <div class="container">
+        <section class="site-info">
+            <header class="page-title">
+                <h1>Toupée</h1>
+            </header>
+            <p>
+                Toupée ("ToPay") is an experimental bill tracking application inspired by <a href="http://addyosmani.github.com/todomvc/">TodoMVC</a>, a popular learning application used to demonstrate JavaScript MV* frameworks.
+            </p>
+            <p>
+                The project is a personal exploration of modern JavaScript best practices and design patterns. Specifically, it makes extensive use of <a href="http://requirejs.org/">RequireJS</a> for modularisation and the <a href="http://backbonejs.org/">Backbone.js</a> MV* framework.
+            </p>
+            <p class="github"><a href="http://github.com/aduth/tupee/">Source and more information on GitHub</a></p>
+        </section>
+
+        <section id="appView" class="app-view">
+            <div class="action-header clearfix">
+                <div class="statistics"></div>
+                <div class="actions">
+                    <button class="clearPaid">Clear paid</button>
+                    <button class="addNew">Add new bill</button>
+                </div>
+            </div>
+            <table class="bills"></table>
+        </section>
+    </div>
+
+    <footer class="container copyright">
+        Copyright &copy; 2012 Andrew Duthie<br>
+        Released under the MIT License
+    </footer>
+
+    <script data-main="js/config" src="js/vendor/require/require.js"></script>
+</body>
+</html>

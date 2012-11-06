@@ -1,0 +1,27 @@
+// Paths
+$root: '/assets/';
+
+// Base Colors
+$base-font-color: #57534A;
+$base-link-color: #187DBC;
+$base-bg-color: #F9F7F4;
+
+$muted-red: darken(desaturate(red, 55%), 5%);
+$muted-green: darken(desaturate(green, 55%), 5%);
+$muted-blue: darken(desaturate(blue, 55%), 15%);
+
+// Typography
+@include font-face(opensans-bold, $root + 'fonts/opensans-bold', bold);
+@include font-face(opensans, $root + 'fonts/opensans-regular');
+$font-family: 'opensans', Helvetica, Arial, sans-serif;
+
+// Component specific colors
+$app-view-border-color: desaturate(lighten($base-font-color, 56%), 20%);
+$app-view-cell-border-color: lighten($app-view-border-color, 6%);
+$app-view-cell-background-color: #fcfcfc;
+
+// Media queries
+$layered: new-breakpoint(max-width 960px 6);
+$minimal: new-breakpoint(max-width 660px 6);
+$mobile: new-breakpoint(max-width 400px 6);
+$due-adjust-max: new-breakpoint(max-width 1200px);

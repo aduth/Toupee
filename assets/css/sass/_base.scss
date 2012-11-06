@@ -1,0 +1,51 @@
+body {
+    @include pad(4%);
+    background-color: $base-bg-color;
+    color: $base-font-color;
+    font-family: $font-family;
+
+    @include media($minimal) {
+        @include pad(1%);
+    }
+}
+
+h1, h2, h3, h4, h5, h6 {
+    @extend .bold;
+    color: darken($base-font-color, 10%);
+}
+
+b, strong {
+    @extend .bold;
+}
+
+a {
+    &, &:link, &:visited {
+        color: $base-link-color;
+        text-decoration: none;
+        border-bottom: 1px dotted $base-link-color;
+    }
+
+    &:hover {
+        color: lighten($base-link-color, 20%);
+        border-bottom: 1px dotted lighten($base-link-color, 20%);
+    }
+}
+
+.container {
+    @include outer-container;
+}
+
+.clearfix {
+    @include clearfix;
+}
+
+.hide {
+    display: none;
+}
+
+.copyright {
+    color: mix($base-font-color, $base-bg-color);
+    font-size: 0.7em;
+    padding: 1em;
+    text-align: right;
+}

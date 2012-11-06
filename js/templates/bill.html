@@ -1,0 +1,20 @@
+<td>
+    <span class="due"><%= $.datepicker.formatDate("mm/dd/yy", due) %></span>
+    <input type="hidden" class="date-picker" />
+</td>
+<td>
+    <span class="description edit"><%= description %></span>
+</td>
+<td>
+    $<span class="amount edit"><%= amount.toFixed(2) %></span>
+</td>
+<td>
+    <div class="button is-paid">
+        <span class="<%= paid ? "yes" : "no" %>"></span>
+    </div>
+</td>
+<td>
+    <div class="button destroy">
+        <span href="#"></span>
+    </div>
+</td>

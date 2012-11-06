@@ -1,0 +1,35 @@
+.page-title {
+    text-align: left;
+
+    @include media($minimal) {
+        text-align: center;
+    }
+}
+
+.page-title h1 {
+    margin: 0;
+    padding-bottom: 0.1em;
+    font-size: 5em;
+    letter-spacing: -5px;
+}
+
+.site-info {
+    @include span-columns(4);
+
+    p {
+        line-height: 1.5;
+
+        &.github {
+            background: url($root + 'img/github.png') no-repeat left center;
+            padding-left: 20px;
+        }
+
+        @include media($minimal) {
+            display: none;
+        }
+    }
+
+    @include media($layered) {
+        @include span-columns(6);
+    }
+}
